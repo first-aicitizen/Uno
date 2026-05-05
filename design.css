@@ -88,3 +88,38 @@ body {
   opacity: 1;
   transform: translateX(5px);
 }
+
+@media (max-width: 768px) {
+  .cards {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 85%; 
+    gap: 16px;
+    margin-top: 40px;
+    
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    
+    scrollbar-width: none; 
+    padding-bottom: 20px; 
+  }
+
+  .cards::-webkit-scrollbar {
+    display: none; 
+  }
+
+  .card {
+    scroll-snap-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard {
+    padding: 40px 16px;
+  }
+
+  .dashboard h1 {
+    font-size: 2.2rem; 
+  }
+}
